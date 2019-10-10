@@ -1,0 +1,42 @@
+.textcorreo
+{
+    margin: 0px;
+    margin-left: 750px;
+    width: 20%;
+    height: 0%;
+    background-color:transparent;
+    font-size: 28%;
+    margin-top: -30px;
+}
+
+#correo
+{
+    margin-left: 750px;
+}
+
+#con
+
+body
+{
+    background: #d3d8e8;
+}
+
+.encabezado { 
+    margin: -10px;
+    width: 1330px;
+    height: 80px;
+    font-family: Arial; 
+    font-size: 50px; 
+    font-weight: 400;
+    color: #ffffff; 
+    background: #3b5998;
+    padding: 15px;
+}
+
+
+.inicio{
+    margin: -10px;
+    
+    color: black;
+    background: #AAC9FF;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>El Primer Script</title>
+
+	<script type="text/javascript">
+		// alert("Hola Mundo! \nHuele a OBO. :(");
+
+		// var x = 1;
+		// var y = 6;
+		// alert(x+y);
+
+		// var valores = [true, 5, false, "hola", "adios", 2];
+		// var resultado = valores[3] > valores[4];
+		// alert(resultado);
+
+		// var valor1 = valores[0];
+		// var valor2 = valores[2];
+
+		// var resultado = valor1 || valor2;
+		// alert(resultado);
+
+
+		// resultado = valor1 && valor2;
+		// alert(resultado);
+
+
+		// var num1 = valores[1];
+		// var num2 = valores[5];
+
+		// var suma = num1 + num2;
+		// alert(suma);
+
+		// var resta = num1 - num2;
+		// alert(resta);
+
+		// var multiplicacion = num1 * num2;
+		// alert(multiplicacion);
+
+		// var division = num1 / num2;
+		// alert(division);
+
+		// var modulo = num1 % num2;
+		// alert(modulo);
+
+var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+var numero = prompt("Introduce tu número de DNI (sin la letra)");
+var letra = prompt("Introduce la letra de tu DNI (en mayúsculas)");
+letra = letra.toUpperCase();
+
+if(numero < 0 || numero > 99999999) {
+  alert("El número proporcionado no es válido");
+}
+else {
+  var letraCalculada = letras[numero % 23];
+  if(letraCalculada != letra) {
+    alert("La letra o el número proporcionados no son correctos");
+  }
+  else {
+    alert("El número de DNI y su letra son correctos");
+  }
+}
+
+
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+CREATE DATABASE PEÑOLES;
+USE PEÑOLES;
+CREATE TABLE CARCAMO
+( 
+ID_C VARCHAR(10) PRIMARY KEY, nombre VARCHAR(50), capacidad DOUBLE, nivel DOUBLE, cant_bombas INT, cant_salidas INT, localización VARCHAR(50)
+);
+CREATE TABLE PH_NIVEL
+(
+ID_PH VARCHAR(10) PRIMARY KEY, Carcamo VARCHAR(10), FOREIGN KEY(Carcamo) REFERENCES CARCAMO(ID_C), nivel double
+);
+CREATE TABLE SAL_AGUA
+(
+ID_SA VARCHAR(10) PRIMARY KEY, cantidad DOUBLE, Carcamo VARCHAR(10), FOREIGN KEY(Carcamo) REFERENCES CARCAMO(ID_C)
+);
+CREATE TABLE Bombas
+(
+ID_B VARCHAR(10) PRIMARY KEY, Carcamo VARCHAR(10), FOREIGN KEY(Carcamo) REFERENCES CARCAMO(ID_C), modo_op VARCHAR(20), est_camp VARCHAR(20), cant_arranques INT, tim_trab INT
+);
+CREATE TABLE ARRANQUE
+(
+ID_NIVA VARCHAR(10) PRIMARY KEY, nivel VARCHAR(10), Carcamo VARCHAR(10), FOREIGN KEY(Carcamo) REFERENCES CARCAMO(ID_C)
+);
+CREATE TABLE USUARIOS
+(
+ID_USER varchar(10) primary KEY, nombre varchar(50), usuario varchar(30), contraseña varchar(18), nivel int
+);
+
+CREATE TABLE HISTORICOS
+(
+IDC VARCHAR(10),
+IDSA VARCHAR(10), 
+USERID varchar(10),
+hora TIME,
+día DATE,
+mes DATE,
+temporada varchar(10),
+año date,
+FOREIGN KEY(IDC) REFERENCES Carcamo(ID_C),
+foreign key (IDSA) references Sal_Agua(ID_SA),
+FOREIGN KEY (USERID) REFERENCES USUARIOS(ID_USER),
+primary key(IDC,IDSA)
+);

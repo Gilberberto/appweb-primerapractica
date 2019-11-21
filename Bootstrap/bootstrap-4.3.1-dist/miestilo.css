@@ -1,0 +1,30 @@
+.container
+{
+	background-color: cyan;
+}
+.cuadro
+{
+	background-color: pink;
+}
+.alto
+{
+	height: 500px;
+	background-color: red;
+}
+.cuadro1
+{
+	background-color: pink;
+	width: 200px;
+	height: 200px;
+}
+.altotote
+{
+	height: 600px;
+}
+.cuadro2
+{
+	margin-left: 40%;
+	background-color: pink;
+	width: 200px;
+	height: 200px;
+}

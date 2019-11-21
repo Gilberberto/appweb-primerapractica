@@ -1,0 +1,15 @@
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-3 d-none d-md-block">
+						hola
+					</div>
+
+					<div class="col-lg-7 col-md-6">
+						hola 2
+					</div>
+
+					<div class="col d-none d-xl-block">
+						hola 3
+					</div>
+				</div>
+			</div>
